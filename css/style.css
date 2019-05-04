@@ -1,0 +1,140 @@
+* { margin:0; padding:0; } 
+ul li {
+  list-style: none;
+}
+html, body { width:100%; height:100%; overflow: hidden; background:black;} 
+canvas { display:block; }
+#controls {
+  z-index: 2;
+  margin: 20px;
+  position: absolute;
+  top: 50%; left: 50%;
+  color: white;
+  width: 1300px;
+  height: 600px;
+  transform: translate(-50%,-50%);
+  /* background: pink; */
+}
+
+#controls ul {
+  width:100%;
+  margin: 0 auto;
+}
+
+#controls ul li{
+  float: left;
+  width:128px;
+  height:176px;
+  /* background:red; */
+  margin: 10px 10px 10px 20px;
+  /* background-size: 100% 100%; */
+  position: relative;
+}
+
+#controls ul li img{
+  width: 128px;
+  height: 176px;
+  position: absolute;
+  transition: all 1s;
+}
+
+#controls ul li:hover img{
+  transform: rotateY(180deg);
+}
+
+img.one{
+  z-index:9;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;	/* Chrome 和 Safari */
+  -moz-backface-visibility:hidden; 	/* Firefox */
+  -ms-backface-visibility:hidden; 	/* Internet Explorer */
+}
+
+/* li:nth-child(1){
+  background: url(../img/01.jpg);
+}
+
+li:nth-child(2){
+  background: url(../img/02.jpg);
+}
+
+li:nth-child(3){
+  background: url(../img/03.jpg);
+}
+
+li:nth-child(4){
+  background: url(../img/04.jpg);
+}
+
+li:nth-child(5){
+  background: url(../img/05.jpg);
+}
+
+li:nth-child(6){
+  background: url(../img/06.jpg);
+}
+
+li:nth-child(7){
+  background: url(../img/07.jpg);
+}
+
+li:nth-child(8){
+  background: url(../img/08.jpg);
+}
+
+li:nth-child(9){
+  background: url(../img/09.jpg);
+}
+
+li:nth-child(10){
+  background: url(../img/10.jpg);
+}
+
+li:nth-child(11){
+  background: url(../img/11.jpg);
+}
+
+li:nth-child(12){
+  background: url(../img/12.jpg);
+}
+
+li:nth-child(13){
+  background: url(../img/13.jpg);
+}
+
+li:nth-child(14){
+  background: url(../img/14.jpg);
+}
+
+li:nth-child(15){
+  background: url(../img/15.jpg);
+}
+
+li:nth-child(16){
+  background: url(../img/16.jpg);
+}
+
+li:nth-child(17){
+  background: url(../img/17.jpg);
+}
+
+li:nth-child(18){
+  background: url(../img/18.jpg);
+}
+
+li:nth-child(19){
+  background: url(../img/19.jpg);
+}
+
+li:nth-child(20){
+  background: url(../img/20.jpg);
+}
+
+li:nth-child(21){
+  background: url(../img/21.jpg);
+}
+
+li:nth-child(22){
+  background: url(../img/22.jpg);
+} */
+
