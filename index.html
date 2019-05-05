@@ -5,109 +5,164 @@
 <meta charset="UTF-8">
 <title>Simple #15</title>
 <link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC|Roboto" rel="stylesheet">
 </head>
 
 <body>
 
 <div id="controls">
-    <!-- <div class="card">
-        <div style="width:160px;height:220px;background:red;"></div>
-    </div> -->
     <ul>
         <li>
             <img class="one" src="./img/01.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L1.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/02.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L3.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/03.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L4.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/04.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L5.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/05.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L6.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/06.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L7.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/07.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L8.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/08.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L9.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/09.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L10.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/10.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L11.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/11.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L12.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/12.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L13.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/13.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L17.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/14.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L2.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/15.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L15.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/16.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L16.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/17.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L14.jpg" alt="">
         </li>
-        <li>
+        <!-- <li>
             <img class="one" src="./img/18.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L1.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/19.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L1.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/20.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L1.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/21.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
+            <img class="two" src="./img/L1.jpg" alt="">
         </li>
         <li>
             <img class="one" src="./img/22.jpg" alt="">
-            <img class="two" src="./img/23.jpg" alt="">
-        </li>
+            <img class="two" src="./img/L1.jpg" alt="">
+        </li> -->
     </ul>
+    <div class="page" id="page">
+        <div class="tell" id="tell">
+            <p></p>
+        </div>
+        <div class="by">
+            <p>--by--<span id="by">御</span>💗</p>
+        </div>
+        <div class="close" onclick="cancel()">
+            ×
+        </div>
+    </div>
 </div>
 
 <script src='js/p5.min.js'></script>
 <script src="js/index.js"></script>
+<script>
+    let oLi = document.getElementsByTagName('li');
+    let page = document.getElementById('page');
+    let by = document.getElementById('by');
+    let tell = document.getElementById('tell');
+    let letter = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
 
+    page.style.display = 'none';
+    
+    let name = ['MIKU','酊酊','花火','喵泉','木子','诺布','扇扇','兔兔','团员','微微','小唯','仙贝','萧萧','爱丽丝','学长','硬币','小马','R','S','T','U','V'];
+    let wish = [
+        '子牙，大家都已经认识快半年了，都是熟人了，我们都不想你这么失落，大家和你一起聊天真的挺有意思，我们也可以为你做点什么，我们也愿意倾听，我们知道也相信你会熬过去的，我们永远在这里。',
+        '牙大佬你好！我是老酊，感谢你帮我解决了辣莫多电脑问题～还给我安利了很多好游戏呢！得知你生病了，心里一紧，很担心你呢，希望你早早的好起来～还有要一直记得身体很重要的呀！好好对自己哦，乐观乐观乐观！等你回来。',
+        '牙牙一定要好起来啊，大家都并不讨厌你哦，生活不会一直那么糟糕的，答应我一定要好起来，加油！',
+        '牙哥，听说你那边出了点状况，心里有紧张那么一下。喵泉首先要表示关心，身体第一，希望不好的事情大化小，小化了；其次是歉意，我没有第一时间了解到情况，直到现在对你的情况也是仅限于御哥告知的三言两语；如果我可以做些什么，那一定莫过于送上温切的祝福和安慰；咱不善言辞，但我表以衷心祝福：身体健康，万事如意，精神抖擞，工作顺利！',
+        'ziya童鞋QAQ木子想你，快好起来啊啊啊',
+        '诺布希望子牙能开心起来其实还是有很多很多人照顾关心子牙的，世界不是子牙想象的那么差劲，虽然会遇到很多很多的磕磕碰碰但是大家都在子牙的背后支持子牙呀，鼓励也好，安慰也好，就算子牙有什么负面情绪倾诉出来也好，都没关系的 大家不会嫌弃子牙 而是一起和子牙解决子牙的问题，所以 请子牙抬起头来！这个世界还是很好的！，大家都很爱子牙的！',
+        '亲爱的牙牙：也许现在的你彷徨无助，也许现在的你遍体鳞伤，但是请一定要坚持，坚持着撑下去，这个世界上有很多细小而温柔的事物环绕着你。你心里的伤痛，有很多人愿意一起分担，但只有身体是不可辜负，因为它会陪伴于你一辈子。人生百年，幕起幕落，韶华白首，转瞬而已，或许三十年，四十年以后的牙牙回过头来看，会骄傲的发现你原来克服了如此多的艰难，骄傲得，会湿了眼眶。请尽早身体康复好，你还有无数且漫长的美好需要遇见，你还有一场走马花灯的人生需要挑战。扇子姐姐等你归来哟。',
+        '希望牙牙能乐观一点，虽然未曾谋面，只是相识于网络，但网上还是有那么多兴趣相投、都喜欢玩游戏的朋友。不论现实如何，只是在网络上不是孤独的。还有活着才是最重要的，不要轻易放弃。',
+        '给子牙:明明刚建好了组，不要一声不吭就走了。我这个人嘴笨，也不知说什么，只是求你多依靠一下别人。虽然现实中没有见过面，但我非常愿意帮你分担一点烦恼，哪怕只有一点点。希望你好好的，别忘了关心你的大家',
+        'To：子牙..把无数的思念化做心中无限的祝福，默默的为子牙祈祷，当子牙出事的时候，欧尼酱可是特别担心你呢，微微也祝愿子牙能早日康复，快点回到我们的大家庭里！欧尼酱和微微都在这里等着你回来！',
+        '子牙，没事哒，什么大风大浪，什么不顺心的事情，拿出来，和大家说一下吧，不要老是憋着心里，这样容易生病的，大家都是你坚强的后盾',
+        '子牙，能和你一起玩雨中冒险2真的很开心！喜欢你的声音，喜欢你steam主页的萌化小子牙！永远喜欢你的仙贝より',
+        ' 子牙，听到你生病的消息后，让我十分泪目。我想大家都好好的，不受病痛的折磨，这么久你一直憋在心里，如果只是一般治疗，我宁愿代替你躺在狭窄的床上度过阴雨连绵的五月份。刚认识你那会，觉得你蛮健谈的，而且作为一个长辈来说是值得学习尊敬的长辈。我这个人嘛，喜欢和能力比自己优秀的人为伍，你实在想不通的时候，就想想我不能失去子牙就好了:)。你说过你喜欢天文哦，那你当然知道银河并不存在，存在的只是无数发光星体；你也知道眼中的不是星星，只是来自遥远过去的光芒；你明明知道银河什么都不像，相似的只是那些燃烧的元素；你知道时间转瞬即逝，所有的星光都将消失。但是我希望啊，你依然会为了看到一颗好看的星星而感到喜悦，也希望你也是一个好看的人。',
+        '子牙，这里是爱丽丝，可能您刚从您的世界里回来，还有点迷糊是谁在敲门，这里有一群人等你回来想看看你的世界，想和你一起搭城堡，一起种森林，一起当勇者，一起遨游你的世界，所以请让我们的力量来点缀你的世界，我们在这里等你(我也想让你看看我的世界哈哈哈)',
+        '我知道，或许你曾与黑暗为伴，或许你抱怨世道不公，但是，你要知道，并不是所有人都是你想象中的大坏蛋，世界本身有美好的一面，为什么不来见识见识呢？你的朋友们都在给你传输光明的力量，为什么还要自甘堕落呢？战胜它吧，勇敢地从黑暗中走出来，我们在光明的彼岸等着你。',
+        '祝子牙早日康复，开开心心每一天，希望以后别做傻事了，多想想对你好的朋友萌和亲人萌。有什么不开心的事可以给大家说出来，这样心里会舒坦一点。，沙雕网友们还是挺治愈人。 以后找不到人玩游戏了，可以直接来找我哦~ ',
+        '听说牙牙病倒了，希望可以早日康复吧！然后赶快出院好起来呀。祝福的话也不想写的太多，就希望牙牙能够每天快快乐乐的！如果快乐太难，那么祝你永远健康，因为没有什么比身体更重要得了。',
+        'R',
+        'S',
+        'T',
+        'U',
+        'V'
+    ]
+
+    for (let i = 0; i < oLi.length; i++) {
+        oLi[i].onclick = function () {
+            page.style.display = 'block';
+            by.innerHTML = name[i];
+            tell.innerHTML = wish[i];
+        }
+    }
+
+    function cancel() {
+        page.style.display = 'none';
+    }
+</script>
 
 
 
